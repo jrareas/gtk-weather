@@ -1,5 +1,5 @@
-#ifndef __MAIN_WINDOW__
-#define __MAIN_WINDOW__
+#ifndef __FSE_WEATHER_MAIN_WINDOW__
+#define __FSE_WEATHER_MAIN_WINDOW__
 
 #include <gtk/gtk.h>
 

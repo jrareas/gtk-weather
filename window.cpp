@@ -1,5 +1,6 @@
 #include "window.h"
 #include <gtk/gtk.h>
+#include "sidebar.h"
 
 MyWindow::MyWindow() {
 
