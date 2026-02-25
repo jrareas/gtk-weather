@@ -30,12 +30,14 @@ SideBar::SideBar(GtkWidget* w) {
     button = gtk_button_new();
     gtk_button_set_child(GTK_BUTTON(button), icon);
     gtk_box_append(GTK_BOX(box), button);
+    gtk_widget_set_size_request(button, 50, 50); 
     
 
     box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
     gtk_list_box_append (GTK_LIST_BOX (list), box);
     icon = gtk_image_new_from_file("icons/power.png");
     button = gtk_button_new();
+    gtk_widget_set_size_request(button, 50, 50); 
     gtk_button_set_child(GTK_BUTTON(button), icon);
     g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_window_destroy), window);
     gtk_box_append(GTK_BOX(box), button);
