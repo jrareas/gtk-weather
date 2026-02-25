@@ -2,10 +2,10 @@ CXX ?= g++
 
 
 all:
-	$(CXX) *.cpp -o weather `pkg-config --cflags gtk4` `pkg-config --libs gtk4`
+	$(CXX) -D'SHARE_ICON="./icons/"' *.cpp -o weather `pkg-config --cflags gtk4` `pkg-config --libs gtk4`
 
 debug: clean
-	$(CXX) -g *.cpp -o weather `pkg-config --cflags gtk4` `pkg-config --libs gtk4`
+	$(CXX) -g -D'SHARE_ICON="./icons/"' *.cpp -o weather `pkg-config --cflags gtk4` `pkg-config --libs gtk4`
 
 clean:
 	rm -f weather
