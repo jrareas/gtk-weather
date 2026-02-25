@@ -2,15 +2,14 @@
 
 #ifndef __FSE_WEATHER_SIDEBAR__
 #define __FSE_WEATHER_SIDEBAR__
-#include "window.h"
-
+#include <gtk/gtk.h>
 class SideBar{
     public:
-        SideBar (MyWindow* w);
+        GtkWidget *window;
+        SideBar(GtkWidget* w);
     private:
         GtkWidget *main_hbox;
-        MyWindow* my_window;
-    
+        gboolean on_close_request(GtkWindow *window, gpointer user_data);
 };
 
 #endif

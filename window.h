@@ -2,10 +2,12 @@
 #define __FSE_WEATHER_MAIN_WINDOW__
 
 #include <gtk/gtk.h>
+#include "sidebar.h"
 
 class MyWindow{
     protected:
         GtkWidget *window;
+        SideBar *side_bar;
     public:
         MyWindow();
         void setApp(GtkApplication* app);

@@ -7,11 +7,15 @@ MyWindow::MyWindow() {
 }
 
 void MyWindow::setApp(GtkApplication* app) {
-    MyWindow::window = gtk_application_window_new (app);
+    MyWindow::window = gtk_application_window_new(app);
+    gtk_window_fullscreen(GTK_WINDOW(MyWindow::window));
     gtk_window_set_title (GTK_WINDOW (MyWindow::window), "Window");
     gtk_window_set_default_size (GTK_WINDOW (MyWindow::window), 200, 200);
     gtk_window_present (GTK_WINDOW (MyWindow::window));
     MyWindow::setWindowDimensions(800, 480);
+    side_bar = new SideBar(MyWindow::window);
+    
+    MyWindow::removeTitleBar();
 }
 
 void MyWindow::removeTitleBar() {
